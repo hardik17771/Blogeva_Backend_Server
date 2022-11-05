@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-const port = process.env.PORT|| 5000;
+const port = process.env.port;
 const bodyParser = require('body-parser');
 const path = require('path')
 
@@ -30,5 +30,5 @@ app.route("/").get( (req,res)=> {
 });
 
 app.listen(port, ()=>{
-    console.log("Listening on port 5000")
+    console.log("Listening on port ${port}")
 });
