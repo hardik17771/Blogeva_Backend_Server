@@ -16,11 +16,11 @@ router.route("/add").post(middleware.checkToken,(req,res)=>{
     .then(()=>
     {
        return res.json({msg: "profile successfully stored"});
-
+ 
     })
     .catch((err)=> {
         return res.status(400).json({err:err});
     });
 });
 
-module.exports= router;
+module.exports= router; 

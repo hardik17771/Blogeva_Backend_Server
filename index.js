@@ -32,3 +32,9 @@ app.route("/").get( (req,res)=> {
 app.listen(port, ()=>{
     console.log("Listening on port ${port} ")
 });
+const profileRoute= require("./routes/profile");
+app.use("/profile", profileRoute);
+
+data = {
+    msg: "root endpoint profile"
+}
