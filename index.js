@@ -36,5 +36,6 @@ const profileRoute= require("./routes/profile");
 app.use("/profile", profileRoute);
 
 data = {
-    msg: "root endpoint profile"
+    msg: "root endpoint profile",
+    info: "hello",
 }

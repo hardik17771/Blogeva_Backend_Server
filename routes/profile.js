@@ -4,12 +4,12 @@ const Profile= require("../models/profiles.model");
 const middleware = require("../middleware");
 
 router.route("/add").post(middleware.checkToken,(req,res)=>{
-    const Profile= Profile({
+    const profile= Profile({
         username:req.decoded.username,
         name: req.body.name,
         profession: req.body.profession,
         DOB: req.body.DOB ,
-        titleline: req.body.titleline,
+        titleline: req.body.titleline,  
         about:req.body.about,
     });
     profile.save()
